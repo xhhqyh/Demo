@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{list-style: none; padding: 0px;}
+			li{float: left; margin-right: 20px;}
+			dd{margin: 0px;}
+			dt{cursor: pointer;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("dt").mouseenter(function(){
+					$(this).css("background", "#ccc");
+					$(this).nextAll("dd").show();
+				});
+				
+				$("dt").mouseleave(function(){
+					$(this).css("background", "#fff");
+				});
+				
+				$("dd").hide();
+				
+				$("li").mouseleave(function(){
+					$(this).children("dd").hide();
+				});
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					<dt>菜单一</dt>
+					<dd>|-aaa</dd>
+					<dd>bbb</dd>
+					<dd>ccc</dd>
+				</li>
+				<li>
+					<dt>菜单二</dt>
+					<dd>|-ddd</dd>
+					<dd>eee</dd>
+					<dd>fff</dd>
+				</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 配置每次刷新时自动加载 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 设置开发者模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+
+	<package name="hoe01" namespace="/" extends="struts-default">
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<interceptor name="first" class="com.qiyanhui.interceptor.UserLoginInterceptor"></interceptor>
+			<!-- <interceptor name="second" class="com.hpe.interceptor.SecondInterceptor"></interceptor> -->
+		</interceptors>
+		
+		<action name="login_user" class="com.qiyanhui.action.UserAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="query_user" class="com.qiyanhui.action.UserAction" method="query">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="*_user" class="com.qiyanhui.action.UserAction" method="{1}">
+			<!-- 引用拦截器 注意：当引入自定义拦截器的时候会覆盖系统的默认拦截器栈 这个时候需要手动引入默认拦截器栈-->
+			<interceptor-ref name="first"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			
+			<result name="success">/index.jsp</result>
+			<result name="timeOut">/timeout.jsp</result>
+			<result name="update">/add.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="loginerror">/loginerror.jsp</result>
+		</action>	
+			
+	</package>
+</struts>

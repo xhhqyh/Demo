@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Jquery-UI插件-form表单</title>
+		<!--引入JQuery包-->
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<!--引入Jquery-UI包 -->
+		<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.js" ></script>
+		<!--引入Jquery-UI样式css文件-->
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+		
+		<script>
+			//文档加载完事件
+			$(function(){
+				$("#dialog").dialog({
+					"width": 380
+				});
+				
+				//获取输入框值
+				$("#btn").click(function(){
+					var value = $("input:first").attr("value");
+					var pass = $("#in-2").attr("value");
+					alert(value+"."+pass)
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="dialog" title="登录框">
+			<form action="#" method="post">
+				<p>用户名：<input type="text" id="" /></p>
+				<p>密码：<input type="text" id="in-2" /></p>
+				<input type="submit" id="btn" value="提交"/>
+			</form>
+		</div>
+		
+	</body>
+</html>

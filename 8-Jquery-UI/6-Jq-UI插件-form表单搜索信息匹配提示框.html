@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Jquery-UI插件-form表单搜索信息匹配提示框</title>
+		<!--引入JQuery包-->
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<!--引入Jquery-UI包 -->
+		<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.js" ></script>
+		<!--引入Jquery-UI样式css文件-->
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+		
+		<script>
+			$(function(){
+				var arr = ["荒岛行动", "荒岛求生", "荒岛大冒险"];
+				
+				$("#name").autocomplete({
+					source: arr
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<p>搜索:<input type="text" name="name" id="name" value="" /></p>
+	</body>
+</html>

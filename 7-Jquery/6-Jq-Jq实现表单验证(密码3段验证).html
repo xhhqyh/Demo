@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="js/demo.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<form action="" method="get" >
+				<p class="p-1">
+					<span class="span-1">昵称</span><input type="text" id="name" class="input" />
+					<span id="nameid"></span>
+				</p>
+				<p class="p-1">
+					<span class="span-1">密码</span><input type="text" id="pass" class="input" />
+					<div id="p" class="passclass">
+						<p id="p-1">长度为6-16个字符</p>
+						<p id="p-2">不能包含空格</p>
+						<p id="p-3">不能是9位以下的纯数字</p>
+					</div>
+				</p>
+				<p class="p-1">
+					<span>确认密码</span><input type="text" id="repass" name="repass" class="input" />
+					<span id="repassid"></span>
+				</p>
+				<p class="p-1">
+					<span>手机号码</span><input type="text" id="phone" name="phone" class="input" />
+					<span id="phoneid"></span>
+				</p>
+				<p class="p-1">
+					<input type="submit" value="提交" class="submit"/>
+					
+				</p>
+			</form>
+		</div>
+	</body>
+</html>

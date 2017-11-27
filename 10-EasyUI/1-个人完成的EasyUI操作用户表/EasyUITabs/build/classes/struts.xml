@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<!-- 配置每次刷新时自动加载 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 设置开发者模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+	
+	<package name="hoe01" namespace="/" extends="struts-default">
+		<action name="*_user" class="com.qiyanhui.action.UserAction" method="{1}">
+			<result name="success">/success.jsp</result>
+		</action>	
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

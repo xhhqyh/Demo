@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Jquery-UI插件-菜单</title>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.js" ></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css"/>
+		
+		<script>
+			$(function(){
+				$("#menu").menu();
+			});
+		</script>
+		
+		<style>
+			.ui-menu {
+				width: 200px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<ul id="menu">
+			<li><span class="ui-icon ui-icon-home" id=""></span>首页</li>
+			<li><span class="ui-icon ui-icon-play" id=""></span>吃鸡</li>
+			<li>
+				<span class="ui-icon ui-icon-play" id=""></span>参赛模式
+				<ul>
+					<li><span class="ui-icon ui-icon-home"></span>个人模式</li>
+					<li><span class="ui-icon ui-icon-home"></span>双人模式</li>
+					<li><span class="ui-icon ui-icon-home"></span>小队模式</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</body>
+</html>

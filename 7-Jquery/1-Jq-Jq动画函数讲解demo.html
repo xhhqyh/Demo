@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000000;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script>
+			$(document).ready(function() {
+				$("#b1").click(function(){
+					//是隐藏的函数显示出来
+//					$("#b1Div").show(1000,function(){
+//						alert("div显示出来了");
+//					});
+					//显示/隐藏切换
+					$("#b1Div").toggle(1000);
+					
+				});
+				//滑出/滑入
+				$("#b2").click(function(){
+					$("#b2Div").slideToggle(1000);
+				});
+				//淡出/淡入
+				$("#b3").click(function(){
+					$("#b3Div").fadeToggle(3000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="b1" value="显示/隐藏 b1Div" />
+		<div id="b1Div" style="display: none;"></div> <br/>
+		<input type="button" id="b2" value="滑出/滑入b2Div" />
+		<div id="b2Div"></div> <br/>
+		<input type="button" id="b3" value="淡出/淡入b3Div" />
+		<div id="b3Div" style="background-color:red"></div>
+		
+	</body>
+</html>

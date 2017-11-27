@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jq实现城市级联</title>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script>
+			$(document).ready(function(){
+				var ptabobj={"bj":["丰台区", "朝阳区", "宣武区", "昌平区"], "sx":["太原", "运城"]};
+				
+				$("#s1").change(function(){
+					$("#s2").empty();
+					var ps = $(this).val();
+					var cs = ptabobj[ps];
+					
+					for(var i=0; i<cs.length; i++){
+						var html="<option value='"+cs[i]+"'>"+cs[i]+"</option>";
+						$("#s2").append(html);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form action="#">
+			<select name="" id="s1">
+				<option value="">--province--</option>
+				<option value="bj">北京</option>
+				<option value="sx">山西</option>
+			</select>
+			<select name="" id="s2">
+				<option value="">--city--</option>
+			</select>
+		</form>
+	</body>
+</html>
