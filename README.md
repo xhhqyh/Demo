@@ -1,7 +1,19 @@
-# variety_shop
+# Demo
 杂货铺
+[toc]
 
     本仓库将存放一些小的Demo
 ---
-#### 一、PHP
-	--PHP设计模式
+
+* Web
+* Java
+* Database
+* JavaWeb
+* Linux
+* JavaScript
+* Jquery
+* Jquery-UI
+* Struts2
+* EasyUI
+* php
+
